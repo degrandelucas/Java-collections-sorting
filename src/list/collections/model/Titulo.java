@@ -19,12 +19,11 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public String toString() {
-        return "Nome do Título " + nome + "Conteudo " + tipoConteudo;
+        return "Nome do Título: " + nome + " - Conteudo " + tipoConteudo;
     }
-
 
     @Override
     public int compareTo(Titulo nomeSeguinte) {
-        return nome.compareTo(nomeSeguinte);
+        return this.nome.compareTo(nomeSeguinte.getNome());
     }
 }

@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static java.lang.StringUTF16.compareTo;
-
 public class App {
     public static void main(String[] args) {
         //1- Lista ordenadas de numeros inteiros
@@ -37,7 +35,9 @@ public class App {
         conteudoLerAssistir.add(conteudoLerAssistir4);
         conteudoLerAssistir.add(conteudoLerAssistir5);
         conteudoLerAssistir.add(conteudoLerAssistir6);
-        System.out.println("\nLista ordenada por título:" + compareTo(conteudoLerAssistir);
+        Collections.sort(conteudoLerAssistir);
+        System.out.println("\nLista ordenada por título: " + conteudoLerAssistir);
 
+        
     }
 }
