@@ -2,9 +2,7 @@ package list.collections.application;
 
 import list.collections.model.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) {
@@ -37,7 +35,26 @@ public class App {
         conteudoLerAssistir.add(conteudoLerAssistir6);
         Collections.sort(conteudoLerAssistir);
         System.out.println("\nLista ordenada por título: " + conteudoLerAssistir);
+        Comparator<Titulo> comparador = Comparator.comparing(Titulo::getTipoConteudo);
+        conteudoLerAssistir.sort(comparador);
+        System.out.println("\nLista ordenada por filme: " + conteudoLerAssistir);
 
-        
+        //4 - Exemplo de ArrayList e LinkedList
+        List<Integer> numerosComArrayList = new ArrayList<>();
+        numerosComArrayList.add(1);
+        numerosComArrayList.add(2);
+        numerosComArrayList.add(3);
+
+        List<Integer> numerosComLinkedList = new LinkedList<>();
+        numerosComLinkedList.add(4);
+        numerosComLinkedList.add(5);
+        numerosComLinkedList.add(6);
+
+        //5 - Impressao de ArrayList e LinkedList, onde verificamos o polimorfismo
+        System.out.println("Impressao de uma lista com ArrayList:");
+        System.out.println(numerosComArrayList);
+
+        System.out.println("Impressao de uma lista com LinkedList:");
+        System.out.println(numerosComLinkedList);
     }
 }

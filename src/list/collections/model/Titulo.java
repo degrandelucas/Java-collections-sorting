@@ -1,5 +1,7 @@
 package list.collections.model;
 
+import java.util.Comparator;
+
 public class Titulo implements Comparable<Titulo> {
     private String nome;
     private String tipoConteudo;
@@ -23,7 +25,7 @@ public class Titulo implements Comparable<Titulo> {
     }
 
     @Override
-    public int compareTo(Titulo nomeSeguinte) {
-        return this.nome.compareTo(nomeSeguinte.getNome());
+    public int compareTo(Titulo tituloNomeSeguinte) {
+        return this.nome.compareTo(tituloNomeSeguinte.getNome());
     }
 }
